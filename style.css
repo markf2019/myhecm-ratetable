@@ -1,0 +1,158 @@
+.ratetableinputs {
+    width: 100%;
+
+}
+
+
+
+/******************************/
+/**** ICB @RATE TABLES ********/
+/******************************/
+
+#icbratetable {
+	margin-left: -25px;
+	margin-right: -25px;
+	margin-top: -15px;
+}
+
+#post-11044 #icbratetable {
+	margin-left: 0px;
+	margin-right: 0px;	
+}
+
+#post-11037 #icbratetable, #post-11095 #icbratetable {
+	margin-left: -10px;
+	margin-right: -10px;	
+}
+
+#myhratetablequicklinks {
+	border: solid 1px #c3c3c3;
+	border-radius: 3px;
+	background-color: #f8f8f8;
+	display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+	align-content: flex-start;
+/*     justify-content: space-evenly; */	
+	margin-bottom: 50px;
+	padding: 10px;
+}
+
+#myh_homepageratetablelinkswrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#myh_homepageratetablelinks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+#myh_homepageratetablelinks .myh_pagerate {
+    width: 450px;
+}
+
+#myhcellwrapper .myh_pagerate a {
+    font-size: .95rem;
+}
+
+.myhratetablelink {
+	font-size: .95rem;
+	padding: 8px;
+	line-height: 1rem;
+	min-width: 480px;
+}
+
+.myhratetablelink a {
+	text-align: center;
+}
+
+/* Rate table links on home page */
+.myh_pagerate .fa-caret-up  {
+	color: darkred;
+}
+
+.myh_pagerate .fa-caret-down {
+	color: green;
+}
+
+.myh_pagerate {
+	height: 40px;
+}
+
+.myh_pagerate span.date {
+	font-size: 10px;
+	color: gray;
+	margin-right: 10px;
+}
+
+.myh_pagerate a {
+	font-size: 17px;
+	padding-bottom: 6px;
+	line-height: 2.4rem;
+}
+
+.myh_pagerate.gray {
+	background-color: #f8f8f8;
+}
+
+.myh_pagerate span.icons {
+	float: left;
+	padding-left: 10px;
+	width: 40px;	
+}
+
+.myh_pagerate span.icons {
+	width: 30px;
+}
+
+#sidebarratetablelinks .myh_pagerate a {
+    font-size: .95rem;
+}
+
+.myh_pagerate span.date {
+	margin-right: 1px;
+}
+
+.myh_pagerate {
+	overflow: hidden;
+    white-space: nowrap;
+    max-width: 1400px;
+    text-overflow: ellipsis;
+}
+
+.myh_pagerate span.date {
+	float: left;
+	width: 40px;
+}
+
+/* Rate table links at end of pages and posts */
+
+#myh_pageratetablelinks {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	align-content: flex-start;
+	justify-content: space-evenly;
+	margin-bottom: 20px;
+/* 	margin-top: -5px; */
+}
+
+.myh_pagerate {
+/* 	min-width: 300px; */
+/* 	max-width: 50%; */
+	width: 100%;
+}
+
+.myh_pagerate .fas.fa-calculator, .myh_pagerate .fa.fa-cloud-download {
+	color: #808080;
+	font-size: .90rem;
+	line-height: 2.50rem;
+}
+
+
