@@ -57,7 +57,7 @@ function myh_home_page_rate_table_links () {
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-purchase-mortgage-rates/\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Purchase Mortgage Rates</a></div>";
 	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-home-equity-lines-of-credit-rates/\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Line of Credit (HELOC) Rates</a></div>";
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-equity-loan-rates/\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Loan Rates</a></div>";
-	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans/current-personal-loan-rates/\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates</a></div>";
+	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans-101/current-personal-loan-rates/\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates</a></div>";
 	$html .= "</div>";	
 
 	$html .= "<div id ='myh_homepageratetableresources'>";
@@ -150,7 +150,7 @@ function myh_generate_rate_table_links ($atts, $content = null) {
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-purchase-mortgage-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Purchase Mortgage Rates " . $creditScore . "</a></div>";
 	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-home-equity-lines-of-credit-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Line of Credit (HELOC) Rates " . $creditScore . "</a></div>";
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-equity-loan-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Loan Rates " . $creditScore . "</a></div>";
-	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans/current-personal-loan-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates " . $creditScore . "</a></div>";
+	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans-101/current-personal-loan-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates " . $creditScore . "</a></div>";
 	$html .= "</div>";	
 
 	return $html;	
@@ -195,7 +195,7 @@ function myh_generate_credit_score_page_rate_table_links ($atts, $content = null
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-purchase-mortgage-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Purchase Mortgage Rates " . $creditScore . "</a></div>";
 	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-home-equity-lines-of-credit-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Line of Credit (HELOC) Rates " . $creditScore . "</a></div>";
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-equity-loan-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Loan Rates " . $creditScore . "</a></div>";
-	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans/current-personal-loan-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates " . $creditScore . "</a></div>";
+	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans-101/current-personal-loan-rates/" . $parameters . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates " . $creditScore . "</a></div>";
 	$html .= "</div>";	
 
 	return $html;	
@@ -361,10 +361,10 @@ function myh_display_sidebar_ratetablelinks () {
 
 	$html .= "<div id ='sidebarratetablelinks'>";
 	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-refinance-mortgage-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Refinance Rates</a></div>";
-	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-purchase-mortgage-rates/" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Purchase Rates</a></div>";
-	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-home-equity-lines-of-credit-rates/" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>HELOC Rates</a></div>";
-	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-equity-loan-rates/" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Loan Rates</a></div>";
-	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans/current-personal-loan-rates/" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates</a></div>";
+	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-purchase-mortgage-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Purchase Rates</a></div>";
+	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-home-equity-lines-of-credit-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>HELOC Rates</a></div>";
+	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-equity-loan-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Loan Rates</a></div>";
+	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans-101/current-personal-loan-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates</a></div>";
 	$html .= "</div>";
 
 	return $html;
@@ -392,7 +392,7 @@ function myh_display_page_ratetablelinks () {
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-purchase-mortgage-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Purchase Mortgage Rates</a></div>";
 	$html .= "<div class='myh_pagerate gray'><a href=\"/mortgage-101/current-home-equity-lines-of-credit-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Line of Credit (HELOC) Rates</a></div>";
 	$html .= "<div class='myh_pagerate'><a href=\"/mortgage-101/current-home-equity-loan-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Home Equity Loan Rates</a></div>";
-	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans/current-personal-loan-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates</a></div>";
+	$html .= "<div class='myh_pagerate gray'><a href=\"/personal-loans-101/current-personal-loan-rates/?external=" . $external . "\"><span class='icons'><i class='fas fa-caret-up'></i><i class='fas fa-caret-down'></i></span><span class='date'>" . date("d-M") . "</span>Personal Loan Rates</a></div>";
 	$html .= "</div>";
 
 	$html .= "<h3>Calculators</h3>";
