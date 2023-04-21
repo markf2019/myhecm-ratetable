@@ -8,8 +8,9 @@ Author:      MRF
 Author URI:  https://www.myhecm.com
 
 
-03/31/2023		MRF		Added functionality to pass credit score parameter from credit score pages into the rate tables to automatically search based on credit score.
-04/04/2023		MRF		Added ppage ID parameters to rate table links for tracking purposes.
+03/31/2023	MRF	Added functionality to pass credit score parameter from credit score pages into the rate tables to automatically search based on credit score.
+04/04/2023	MRF	Added page ID parameters to rate table links for tracking purposes.
+04/21/2023	MRF	Added functionality to pass test site ID when admin logged in so analytics are screwed up with admin page views.
 
 */
 
@@ -218,7 +219,7 @@ function myh_generate_rate_table ($atts) {
 	$creditScore = '';
 
 	extract( shortcode_atts( array(
-			'product' => '', 'loantype' => ''
+			'product' => '', 'loantype' => '', 'state' => ''
 		), $atts ) ); 
 	
 	if ($atts['loantype'] == 'refi') { 
@@ -240,16 +241,32 @@ function myh_generate_rate_table ($atts) {
 		$parameters .= '&external=' . $_GET['external'];
 	}		
 
+	// Checking for the state URL parameter.
+	if (isset($_GET['state'])) {
+		$parameters .= '&state=' . $_GET['state'];
+	}  else if ($atts['state'] != '') { 
+		$parameters .= '&state=' . $atts['state'];		
+	}	
+
+	// If admin logged in, use test site ID so analytics aren't messed up.
+	if(current_user_can('administrator')) {
+		$siteID = 'a1be19a9756b84ea'; // Test side ID. 
+	} else {
+		$siteID = 'af8cb55bb139fc6c'; // Live site ID.		
+	}	
+
+	// echo $siteID;		
+
 	if ($atts['product'] == '') {
-		$url = 'https://widgets.icanbuy.com/c/standard/us/en/mortgage/tables/Mortgage.aspx?siteid=af8cb55bb139fc6c&hideheader=1&&redirect_no_results=1&redirect_to_mortgage_funnel=1&fha=1&va=1' . $loan_type . $parameters;
+		$url = 'https://widgets.icanbuy.com/c/standard/us/en/mortgage/tables/Mortgage.aspx?siteid=' . $siteID . '&hideheader=1&&redirect_no_results=1&redirect_to_mortgage_funnel=1&fha=1&va=1' . $loan_type . $parameters;
 	}  else if ($atts['product'] == 'mortgage') { 
-		$url = 'https://widgets.icanbuy.com/c/standard/us/en/mortgage/tables/Mortgage.aspx?siteid=af8cb55bb139fc6c&hideheader=1&&redirect_no_results=1&redirect_to_mortgage_funnel=1&fha=1&va=1' . $loan_type . $parameters;
+		$url = 'https://widgets.icanbuy.com/c/standard/us/en/mortgage/tables/Mortgage.aspx?siteid=' . $siteID . '&hideheader=1&&redirect_no_results=1&redirect_to_mortgage_funnel=1&fha=1&va=1' . $loan_type . $parameters;
 	}  else if ($atts['product'] == 'personal') { 
-		$url = 'https://widgets.icanbuy.com/c/standard/us/en/personalloan/tables/ms/PersonalLoans.aspx?disable_paging=1&siteid=af8cb55bb139fc6c&hideheader=1' . $parameters;
+		$url = 'https://widgets.icanbuy.com/c/standard/us/en/personalloan/tables/ms/PersonalLoans.aspx?disable_paging=1&siteid=' . $siteID . '&hideheader=1' . $parameters;
 	}  else if ($atts['product'] == 'heloc') { 	
-		$url = 'https://widgets.icanbuy.com/c/standard/us/en/homeequity/tables/HomeEquityCurrent.aspx?siteid=af8cb55bb139fc6c&hideheader=1&property_value=500000&mortgage_balance=100000&loan_amount=50000&loan_product=HELOC' . $parameters;		
+		$url = 'https://widgets.icanbuy.com/c/standard/us/en/homeequity/tables/HomeEquityCurrent.aspx?siteid=' . $siteID . '&hideheader=1&property_value=500000&mortgage_balance=100000&loan_amount=50000&loan_product=HELOC' . $parameters;		
 	}  else if ($atts['product'] == 'homeequity') { 	
-		$url = 'https://widgets.icanbuy.com/c/standard/us/en/homeequity/tables/HomeEquityCurrent.aspx?siteid=af8cb55bb139fc6c&hideheader=1&property_value=500000&mortgage_balance=100000&loan_amount=75000&loan_product=HELOAN_FIXED_10YEARS,HELOAN_FIXED_15YEARS,HELOAN_FIXED_20YEARS,HELOAN_FIXED_30YEARS' . $parameters;		
+		$url = 'https://widgets.icanbuy.com/c/standard/us/en/homeequity/tables/HomeEquityCurrent.aspx?siteid=' . $siteID . '&hideheader=1&property_value=500000&mortgage_balance=100000&loan_amount=75000&loan_product=HELOAN_FIXED_10YEARS,HELOAN_FIXED_15YEARS,HELOAN_FIXED_20YEARS,HELOAN_FIXED_30YEARS' . $parameters;		
 	}
 
 	$html = '';
